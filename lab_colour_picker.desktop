@@ -1,0 +1,8 @@
+[Desktop Entry]
+Type=Service
+ServiceTypes=Krita/PythonPlugin
+X-KDE-Library=lab_colour_picker
+X-Python-2-Compatible=false
+X-Krita-Manual=Manual.html
+Name=OKLab Colour Selector
+Comment=Perceptual colour selector using the OKLab colour space.
