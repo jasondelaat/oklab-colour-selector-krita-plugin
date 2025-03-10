@@ -55,3 +55,21 @@ buttons at the bottom.
     
     </center>
 
+
+# Issues
+
+-   Currently all font/window/etc. sizes are hard coded and non-resizable.
+-   Switching to a new view *should* update it to the current foreground
+    colour. But there seem to be some bugs/edge cases which means it
+    doesn&rsquo;t always work properly.
+-   In the Hue Plane view the hue slider is just a normal slider and
+    doesn&rsquo;t display the hues.
+-   Views and sliders are not as responsive as they should be. This is
+    largely because it&rsquo;s the first time I&rsquo;ve used Qt/PyQt and I just did
+    the simplest thing I could make work. Once I find better ways to do
+    things performance should improve.
+-   Jagged pixelated edges. Pretty much the same issue as above. The
+    selector views are smallish images that can be updated relatively
+    quickly which are then scaled up slightly. Again, digging further
+    into the guts of Qt should eventually fix this problem.
+

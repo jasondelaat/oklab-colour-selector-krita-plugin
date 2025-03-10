@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2025-03-09 Sun 12:00 -->
+<!-- 2025-03-10 Mon 07:40 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Perceptual Colour Selector</title>
@@ -212,9 +212,9 @@ in this blog post:
 <a href="https://bottosson.github.io/posts/oklab/">https://bottosson.github.io/posts/oklab/</a>
 </p>
 
-<div id="outline-container-org2769309" class="outline-2">
-<h2 id="org2769309">Views</h2>
-<div class="outline-text-2" id="text-org2769309">
+<div id="outline-container-org3fbb4bf" class="outline-2">
+<h2 id="org3fbb4bf">Views</h2>
+<div class="outline-text-2" id="text-org3fbb4bf">
 <p>
 There are three views for selecting colours available via the radio
 buttons at the bottom.
@@ -274,6 +274,28 @@ out of gamut colours simply become gaps in the circle.
 </p>
 </center></dd>
 </dl>
+</div>
+</div>
+
+<div id="outline-container-org3e5610d" class="outline-2">
+<h2 id="org3e5610d">Issues</h2>
+<div class="outline-text-2" id="text-org3e5610d">
+<ul class="org-ul">
+<li>Currently all font/window/etc. sizes are hard coded and non-resizable.</li>
+<li>Switching to a new view <i>should</i> update it to the current foreground
+colour. But there seem to be some bugs/edge cases which means it
+doesn&rsquo;t always work properly.</li>
+<li>In the Hue Plane view the hue slider is just a normal slider and
+doesn&rsquo;t display the hues.</li>
+<li>Views and sliders are not as responsive as they should be. This is
+largely because it&rsquo;s the first time I&rsquo;ve used Qt/PyQt and I just did
+the simplest thing I could make work. Once I find better ways to do
+things performance should improve.</li>
+<li>Jagged pixelated edges. Pretty much the same issue as above. The
+selector views are smallish images that can be updated relatively
+quickly which are then scaled up slightly. Again, digging further
+into the guts of Qt should eventually fix this problem.</li>
+</ul>
 </div>
 </div>
 </div>
