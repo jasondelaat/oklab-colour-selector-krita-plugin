@@ -110,7 +110,7 @@ class LightnessDisplay(SelectorSurface):
         hue_delta = hue_high - hue_low
         chroma_delta = chroma_high - chroma_low
         half_size = self.display_size / 2
-        max_ch = lerp(chroma_low, chroma_high, (hue - hue_low) / hue_delta) if hue_delta > 0 else low
+        max_ch = lerp(chroma_low, chroma_high, (hue - hue_low) / hue_delta) if hue_delta > 0 else chroma_low
         ch = math.sqrt(lab.a*lab.a + lab.b*lab.b)
         self.position = (
           int(half_size + ch * math.cos(hue) * half_size / max_ch),
