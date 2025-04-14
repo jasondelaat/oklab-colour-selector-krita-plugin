@@ -44,7 +44,7 @@ Lab = namedtuple('Lab', ['L', 'a', 'b'])
 RGB = namedtuple('RGB', ['r', 'g', 'b'])
 
 def srgb_to_oklab(c):
-    #c = RGB(*map(srgb_channel_to_rgb_channel, c))
+    c = RGB(*map(srgb_channel_to_rgb_channel, c))
     l = 0.4122214708 * c.r + 0.5363325363 * c.g + 0.0514459929 * c.b
     m = 0.2119034982 * c.r + 0.6806995451 * c.g + 0.1073969566 * c.b
     s = 0.0883024619 * c.r + 0.2817188376 * c.g + 0.6299787005 * c.b
