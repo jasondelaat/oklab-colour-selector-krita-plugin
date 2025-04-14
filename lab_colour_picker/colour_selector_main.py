@@ -52,15 +52,17 @@ class lab_colour_picker(QDockWidget):
     def set_display(self):
         if self.gamut.isChecked():
             self.view_stack.setCurrentIndex(0)
-            self.gamut_view.updateToForeGroundColour()
+            self.current_view = self.gamut_view
 
         if self.plane.isChecked():
             self.view_stack.setCurrentIndex(1)
-            self.plane_view.updateToForeGroundColour()
+            self.current_view = self.plane_view
 
         if self.chroma.isChecked():
             self.view_stack.setCurrentIndex(2)
-            self.chroma_view.updateToForeGroundColour()
+            self.current_view = self.chroma_view
+
+        self.current_view.updateToForeGroundColour()
 
     def canvasChanged(self):
         pass
