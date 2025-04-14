@@ -105,6 +105,11 @@ class LightnessDisplay(SelectorSurface):
         if not lab:
             return
         
+        self.lightness = lab.L
+        self.parent().setSlider(lab.L)
+        self.calculateMaxChromas()
+        self.calculateColours()
+
         hue = math.atan2(lab.b, lab.a)
         ((hue_low, chroma_low), (hue_high, chroma_high)) = search(self.chromas, hue)
         hue_delta = hue_high - hue_low
@@ -117,10 +122,6 @@ class LightnessDisplay(SelectorSurface):
           int(half_size - ch * math.sin(hue) * half_size / max_ch)
         )
         self.indicator.move(*self.position)
-        self.lightness = lab.L
-        self.parent().setSlider(lab.L)
-        self.calculateMaxChromas()
-        self.calculateColours()
 
 class LightnessSelector(QWidget):
     def __init__(self, parent):
