@@ -126,6 +126,8 @@ def makeSurface(size):
 
             argb = self.image.pixelColor(*self.position)
             selected_colour = ManagedColor.fromQColor(argb)
+            colour_picker = win.qwindow().findChild(QDockWidget, 'lab_colour_picker')
+            colour_picker.foreground = selected_colour
             view.setForeGroundColor(selected_colour)
             self.indicator.move(self.position[0]-6, self.position[1]-6)
 

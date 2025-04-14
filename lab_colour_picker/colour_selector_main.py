@@ -14,6 +14,9 @@ class lab_colour_picker(QDockWidget):
 #class lab_colour_picker(QDialog):
     def __init__(self):
         super().__init__()
+
+        self.foreground = None
+        
         self.setWindowTitle('OKLab Colour Selector')
         self.main = QWidget(self)
         self.layout = QGridLayout()
@@ -47,8 +50,20 @@ class lab_colour_picker(QDockWidget):
         #self.main.show()
 
         self.setWidget(self.main)
-        
 
+        self.startTimer(100)
+
+    def timerEvent(self, ev):
+        fg = Krita.instance().activeWindow().activeView().foregroundColor()
+        if not self.foreground:
+            self.foreground = fg
+            return
+
+        if fg != self.foreground:
+            self.foreground = fg
+            self.current_view.updateToForeGroundColour()
+
+        
     def set_display(self):
         if self.gamut.isChecked():
             self.view_stack.setCurrentIndex(0)
