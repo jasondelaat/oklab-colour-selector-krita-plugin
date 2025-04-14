@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2025-03-10 Mon 07:40 -->
+<!-- 2025-04-14 Mon 08:17 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Perceptual Colour Selector</title>
@@ -212,9 +212,24 @@ in this blog post:
 <a href="https://bottosson.github.io/posts/oklab/">https://bottosson.github.io/posts/oklab/</a>
 </p>
 
-<div id="outline-container-org3fbb4bf" class="outline-2">
-<h2 id="org3fbb4bf">Views</h2>
-<div class="outline-text-2" id="text-org3fbb4bf">
+<div id="outline-container-orga9bfcf9" class="outline-2">
+<h2 id="orga9bfcf9">Installing</h2>
+<div class="outline-text-2" id="text-orga9bfcf9">
+<ol class="org-ol">
+<li>Click the &rsquo;&lt;&gt; Code&rsquo; drop-down near the top of the github repository
+page and select &rsquo;Download ZIP&rsquo;</li>
+<li>In the Krita Tools menu, selected Scripts &gt; Import Python Plugin
+from File&#x2026;</li>
+<li>Select the downloaded zip file and select &rsquo;Yes&rsquo; when prompted to
+enable the plugin.</li>
+<li>Restart Krita.</li>
+</ol>
+</div>
+
+
+<div id="outline-container-org967dbe2" class="outline-3">
+<h3 id="org967dbe2">Views</h3>
+<div class="outline-text-3" id="text-org967dbe2">
 <p>
 There are three views for selecting colours available via the radio
 buttons at the bottom.
@@ -277,9 +292,9 @@ out of gamut colours simply become gaps in the circle.
 </div>
 </div>
 
-<div id="outline-container-org3e5610d" class="outline-2">
-<h2 id="org3e5610d">Issues</h2>
-<div class="outline-text-2" id="text-org3e5610d">
+<div id="outline-container-org836943e" class="outline-3">
+<h3 id="org836943e">Issues</h3>
+<div class="outline-text-3" id="text-org836943e">
 <ul class="org-ul">
 <li>Currently all font/window/etc. sizes are hard coded and non-resizable.</li>
 <li>Switching to a new view <i>should</i> update it to the current foreground
@@ -296,6 +311,7 @@ selector views are smallish images that can be updated relatively
 quickly which are then scaled up slightly. Again, digging further
 into the guts of Qt should eventually fix this problem.</li>
 </ul>
+</div>
 </div>
 </div>
 </div>

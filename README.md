@@ -7,7 +7,18 @@ in this blog post:
 <https://bottosson.github.io/posts/oklab/>
 
 
-# Views
+# Installing
+
+1.  Click the &rsquo;<> Code&rsquo; drop-down near the top of the github repository
+    page and select &rsquo;Download ZIP&rsquo;
+2.  In the Krita Tools menu, selected Scripts > Import Python Plugin
+    from File&#x2026;
+3.  Select the downloaded zip file and select &rsquo;Yes&rsquo; when prompted to
+    enable the plugin.
+4.  Restart Krita.
+
+
+## Views
 
 There are three views for selecting colours available via the radio
 buttons at the bottom.
@@ -56,7 +67,7 @@ buttons at the bottom.
     </center>
 
 
-# Issues
+## Issues
 
 -   Currently all font/window/etc. sizes are hard coded and non-resizable.
 -   Switching to a new view *should* update it to the current foreground
